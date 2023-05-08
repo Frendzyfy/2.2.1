@@ -19,6 +19,11 @@ public class UserServiceImp implements UserService {
    public void add(User user) {
       userDao.add(user);
    }
+   @Transactional
+   @Override
+   public User getUserWhereCar(Long id, int series) {
+      return userDao.getUserWhereCar(id, series);
+   }
 
    @Transactional(readOnly = true)
    @Override
