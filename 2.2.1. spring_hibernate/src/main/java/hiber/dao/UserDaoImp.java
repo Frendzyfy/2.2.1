@@ -28,10 +28,10 @@ public class UserDaoImp implements UserDao {
 //      try(Session session = sessionFactory.getCurrentSession()) {
 //         session.beginTransaction();
 //         transaction = sessionFactory.getCurrentSession().getTransaction();
-//         NativeQuery nativeQuery = session.createNativeQuery("from car where id = :paramId, series = :paramSeries");
-//         nativeQuery.setParameter("paramId", id);
-//         nativeQuery.setParameter("paramSeries", series);
-//         List<Car> list = nativeQuery.getResultList();
+//         Query query = sessionFactory.getCurrentSession().createQuery("FROM Car c WHERE c.id = :paramId AND c.series = :paramSeries");
+//         query.setParameter("paramId", id);
+//         query.setParameter("paramSeries", series);
+//         List<Car> cars = query.list();
 //         return list.get(0).getUser();
 //      } catch (Exception e) {
 //         if (transaction != null) {
