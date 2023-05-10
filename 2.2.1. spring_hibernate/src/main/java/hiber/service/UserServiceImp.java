@@ -21,8 +21,8 @@ public class UserServiceImp implements UserService {
    }
    @Transactional
    @Override
-   public User getUserWhereCar(Long id, int series) {
-      return userDao.getUserWhereCar(id, series);
+   public User getUserWhereCar(String model, int series) {
+      return userDao.getUserWhereCar(model, series);
    }
 
    @Transactional(readOnly = true)

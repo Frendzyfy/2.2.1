@@ -26,7 +26,7 @@ public class MainApp {
       userService.add(new User("User3", "Lastname3", "user3@mail.ru",car2));
       userService.add(new User("User4", "Lastname4", "user4@mail.ru",car3));
 
-      System.out.println(userService.getUserWhereCar((long)1,1432));
+      System.out.println(userService.getUserWhereCar("Honda",1432));
       System.out.println();
 
       List<User> users = userService.listUsers();

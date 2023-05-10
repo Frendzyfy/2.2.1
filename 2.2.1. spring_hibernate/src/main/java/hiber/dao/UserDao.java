@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface UserDao {
    void add(User user);
-   public User getUserWhereCar(Long id, int series);
+   public User getUserWhereCar(String model, int series);
    List<User> listUsers();
 }
